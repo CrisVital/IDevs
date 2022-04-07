@@ -13,7 +13,7 @@ public class Desafio03 {
 		c = c+ n;
 
 		for (int a = 1; a <= n; a++) {
-			System.out.println("   "+b);
+			System.out.println("   ")
 			System.out.print(a+" ");
 
 			for (int i = 1; i < n; i++) {
