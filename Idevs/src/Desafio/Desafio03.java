@@ -2,26 +2,48 @@ package Desafio;
 
 import java.util.Scanner;
 
-public class Desafio03 {
+public class Desafio02 {
 
 	public static void main(String[] args) {
+		int soma = 0, i, a = 0;
 		Scanner sc = new Scanner(System.in);
-		int n = 0 , c = 0, b = 0;
 
-		System.out.println("Insira o número que deseja saber os divisores:");
-		n = sc.nextInt();
-		c = c+ n;
+		System.out.println("Digite um numero: ");
+		a = sc.nextInt();
 
-		for (int a = 1; a <= n; a++) {
-			System.out.println("   "+b);
-			System.out.print(a+" ");
+		for (i = 2; i < a; i++) {
+			if (ehPrimo(i))
 
-			for (int i = 1; i < n; i++) {
-				if (a % i == 0) {
-					System.out.print("  "+i);
+				if (soma < a) {
+					soma = soma + i;
+					if (validaprimo(soma))
+						;
+
 				}
-			}
+			sc.close();
 		}
-		sc.close();
 	}
+
+	private static boolean validaprimo(int primo) {
+		for (int j = 2; j < primo; j++) {
+			if (primo % j == 0)
+				return false;
+
+		}
+		System.out.println(primo);
+		return true;
+
+	}
+
+	private static boolean ehPrimo(int numero) {
+		for (int j = 2; j < numero; j++) {
+			if (numero % j == 0)
+				return false;
+
+		}
+
+		return true;
+	}
+
 }
+
